@@ -8,7 +8,7 @@ This project is a RESTful API for a task management system built with Node.js, E
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/task-management-api.git
+git clone https://github.com/yourusername/task-management-api.git <br>
 cd task-management-api
 
 2. Install dependencies:
@@ -18,8 +18,8 @@ npm install
 3. Set up environment variables:
 Create a `.env` file in the root directory with the following content:
 
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
+PORT=5000<br>
+MONGODB_URI=your_mongodb_connection_string<br>
 JWT_SECRET=your_jwt_secret
 
 Replace `your_mongodb_connection_string` with your actual MongoDB connection string and generate a strong `JWT_SECRET`.
