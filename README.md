@@ -8,26 +8,26 @@ This project is a RESTful API for a task management system built with Node.js, E
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/task-management-api.git <br>
-cd task-management-api
+    git clone https://github.com/yourusername/task-management-api.git <br>
+    cd task-management-api
 
 2. Install dependencies:
 
-npm install
+    npm install
 
 3. Set up environment variables:
-Create a `.env` file in the root directory with the following content:
+    Create a `.env` file in the root directory with the following content:
 
-PORT=5000<br>
-MONGODB_URI=your_mongodb_connection_string<br>
-JWT_SECRET=your_jwt_secret
+    PORT=5000<br>
+    MONGODB_URI=your_mongodb_connection_string<br>
+    JWT_SECRET=your_jwt_secret
 
-Replace `your_mongodb_connection_string` with your actual MongoDB connection string and generate a strong `JWT_SECRET`.
+    Replace `your_mongodb_connection_string` with your actual MongoDB connection string and generate a strong `JWT_SECRET`.
 
 
 4. Start the server:
 
-npm run dev
+    npm run dev
 
 5. The API will be available at `http://localhost:5000` in development mode, or at `https://yourdomain.com` in production mode. The home page will automatically redirect to the Swagger documentation.
 
