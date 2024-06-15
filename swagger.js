@@ -1,5 +1,7 @@
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const options = {
     definition: {
@@ -11,8 +13,8 @@ const options = {
         },
         servers: [
             {
-                url: 'https://task-management-api-8e1h.onrender.com',
-            },
+                url: process.env.URL,
+            }
         ],
         components: {
             securitySchemes: {
