@@ -4,21 +4,6 @@
 
 This project is a RESTful API for a task management system built with Node.js, Express, and MongoDB. It provides user authentication and CRUD operations for tasks.
 
-## Environment Setup
-
-This project uses environment variables to configure its behavior:
-
-- `PORT`: The port on which the server will run (default: 5000)
-- `MONGODB_URI`: Connection string for your MongoDB database
-- `JWT_SECRET`: Secret key for JWT token generation and verification
-- `NODE_ENV`: Set to 'development' or 'production' to determine the running mode
-- `DOMAIN`: Your production domain name
-
-In development mode (`NODE_ENV=development`), the API will be accessible at `http://localhost:PORT`.
-In production mode (`NODE_ENV=production`), the API will be accessible at `https://DOMAIN`.
-
-The BASE_URL is automatically set based on the `NODE_ENV` and `DOMAIN` variables.
-
 ## Setup Instructions
 
 1. Clone the repository:
