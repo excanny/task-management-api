@@ -4,6 +4,21 @@
 
 This project is a RESTful API for a task management system built with Node.js, Express, and MongoDB. It provides user authentication and CRUD operations for tasks.
 
+## Environment Setup
+
+This project uses environment variables to configure its behavior:
+
+- `PORT`: The port on which the server will run (default: 5000)
+- `MONGODB_URI`: Connection string for your MongoDB database
+- `JWT_SECRET`: Secret key for JWT token generation and verification
+- `NODE_ENV`: Set to 'development' or 'production' to determine the running mode
+- `DOMAIN`: Your production domain name
+
+In development mode (`NODE_ENV=development`), the API will be accessible at `http://localhost:PORT`.
+In production mode (`NODE_ENV=production`), the API will be accessible at `https://DOMAIN`.
+
+The BASE_URL is automatically set based on the `NODE_ENV` and `DOMAIN` variables.
+
 ## Setup Instructions
 
 1. Clone the repository:
@@ -21,14 +36,16 @@ Create a `.env` file in the root directory with the following content:
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=9d1aa770a428cafe82e865aa57b53b23f24dde08b9fb5bcfc395d1372d287d418c8c313f9812774afaf3a399f6eaa31ebd93db21bbdf942081e43da389224aea
+NODE_ENV=development
+DOMAIN=yourdomain.com
 
-Replace `your_mongodb_connection_string` with your actual MongoDB connection string.
+Replace `your_mongodb_connection_string` with your actual MongoDB connection string and .
 
 4. Start the server:
 
 npm run dev
 
-5. The API will be available at `http://localhost:5000`. You can access the Swagger documentation at `http://localhost:5000/swagger`.
+5. The API will be available at `http://localhost:5000` in development mode, or at `https://yourdomain.com` in production mode. The home page will automatically redirect to the Swagger documentation.
 
 ## Approach
 
@@ -45,6 +62,8 @@ npm run dev
 6. **Documentation**: Integrated Swagger for clear, interactive API documentation.
 
 7. **Error Handling**: Implemented centralized error handling for consistent error responses.
+
+8. **Dynamic Environment Configuration**: Implemented automatic BASE_URL determination based on the environment, supporting both local development and production deployment without code changes.
 
 ## Assumptions
 
@@ -69,6 +88,8 @@ npm run dev
 4. **Swagger**: Used for its ability to provide interactive API documentation, making it easier for developers to understand and test the API.
 
 5. **Express-validator**: Chosen for its integration with Express.js and its comprehensive validation and sanitization features.
+
+6. **Environment-based URL Configuration**: Chose to dynamically set the BASE_URL based on the environment to seamlessly support both local development and production deployment, enhancing the project's flexibility and ease of use across different stages of development.
 
 These choices were made to create a scalable, maintainable, and well-documented API that adheres to best practices in modern web development.
 

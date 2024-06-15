@@ -11,7 +11,7 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:5000',
+                url: 'https://task-management-api-8e1h.onrender.com',
             },
         ],
         components: {

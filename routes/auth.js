@@ -40,12 +40,16 @@ import User from '../models/User.js';
 router.post('/signup', async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) return res.status(400).json({ status: false, message: 'User already exists' });
+      
     const hashedPassword = await hash(password, 10);
     const user = new User({ email, password: hashedPassword });
     await user.save();
     res.status(201).json({ status: true, message: 'User created successfully' });
   } catch (error) {
-    res.status(500).json({ status: false, message: 'Error creating user' });
+    res.status(500).json({ status: false, message: error });
   }
 });
 
