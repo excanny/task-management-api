@@ -35,11 +35,10 @@ Create a `.env` file in the root directory with the following content:
 
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=9d1aa770a428cafe82e865aa57b53b23f24dde08b9fb5bcfc395d1372d287d418c8c313f9812774afaf3a399f6eaa31ebd93db21bbdf942081e43da389224aea
-NODE_ENV=development
-DOMAIN=yourdomain.com
+JWT_SECRET=your_jwt_secret
 
-Replace `your_mongodb_connection_string` with your actual MongoDB connection string and .
+Replace `your_mongodb_connection_string` with your actual MongoDB connection string and generate a strong `JWT_SECRET`.
+
 
 4. Start the server:
 
